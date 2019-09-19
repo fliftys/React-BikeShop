@@ -1,0 +1,55 @@
+/* ------------------------------ */
+/* Filter */
+/* ------------------------------ */
+.filterProducts{
+  padding: 4rem 0 0 0;
+
+  &__form{
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  &__input-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  &__label{
+    margin: 0 .5rem;
+  }
+
+  &__select{
+    position: relative; 
+    background-color: #e2e2e2;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    padding: .5rem 1rem;
+    font-size: .8rem;
+    border: none;
+
+  }
+  &__option{
+    
+  }
+  &__result{
+    text-align: center;
+    color: #008f30;
+  }
+}
+
+
+/* ------------------------------ */
+/* Sorted Products */
+/* ------------------------------ */
+.sortedProducts{
+
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 1rem;
+  padding: 4rem 0;
+
+}

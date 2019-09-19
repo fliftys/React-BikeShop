@@ -1,0 +1,135 @@
+[
+  {
+    "id": 0,
+    "name": "Tokio",
+    "img": "/data/img/0.jpg",
+    "type": "szosowy",
+    "color": "zielony",
+    "company": "Scott",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, voluptatum saepe quibusdam, culpa facere nam voluptatibus nesciunt est necessitatibus totam hic animi quasi dolorem minus officia? Quibusdam molestias incidunt adipisci doloribus distinctio, eius veritatis ipsum recusandae numquam, fugit, harum ipsa excepturi voluptate. Repudiandae nesciunt ex ab, dolor provident at dolores esse numquam? Fugiat eaque tempore, nisi accusamus quasi commodi numquam?",
+    "premium": true,
+    "inCart": false,
+    "price": 2000,
+    "count": 0,
+    "total": 0
+  },
+  {
+    "id": 1,
+    "name": "Berlin",
+    "img": "/data/img/1.jpg",
+    "type": "elektryczny",
+    "color": "szary",
+    "company": "Kross",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, voluptatum saepe quibusdam, culpa facere nam voluptatibus nesciunt est necessitatibus totam hic animi quasi dolorem minus officia? Quibusdam molestias incidunt adipisci doloribus distinctio, eius veritatis ipsum recusandae numquam, fugit, harum ipsa excepturi voluptate. Repudiandae nesciunt ex ab, dolor provident at dolores esse numquam? Fugiat eaque tempore, nisi accusamus quasi commodi numquam?",
+    "premium": false,
+    "inCart": false,
+    "price": 3500,
+    "count": 0,
+    "total": 0
+  },
+  {
+    "id": 2,
+    "name": "Moskwa",
+    "img": "/data/img/2.jpg",
+    "type": "MTB",
+    "color": "czarny",
+    "company": "Kellys",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, voluptatum saepe quibusdam, culpa facere nam voluptatibus nesciunt est necessitatibus totam hic animi quasi dolorem minus officia? Quibusdam molestias incidunt adipisci doloribus distinctio, eius veritatis ipsum recusandae numquam, fugit, harum ipsa excepturi voluptate. Repudiandae nesciunt ex ab, dolor provident at dolores esse numquam? Fugiat eaque tempore, nisi accusamus quasi commodi numquam?",
+    "premium": true,
+    "inCart": false,
+    "price": 1900,
+    "count": 0,
+    "total": 0
+  },
+
+  {
+    "id": 3,
+    "name": "Helsinki",
+    "img": "/data/img/3.jpg",
+    "type": "MTB",
+    "color": "niebieski",
+    "company": "Kross",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, voluptatum saepe quibusdam, culpa facere nam voluptatibus nesciunt est necessitatibus totam hic animi quasi dolorem minus officia? Quibusdam molestias incidunt adipisci doloribus distinctio, eius veritatis ipsum recusandae numquam, fugit, harum ipsa excepturi voluptate. Repudiandae nesciunt ex ab, dolor provident at dolores esse numquam? Fugiat eaque tempore, nisi accusamus quasi commodi numquam?",
+    "premium": false,
+    "inCart": false,
+    "price": 700,
+    "count": 0,
+    "total": 0
+  },
+  
+  {
+    "id": 4,
+    "name": "Paryż",
+    "img": "/data/img/4.jpg",
+    "type": "szosowy",
+    "color": "seledynowy",
+    "company": "Scott",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, voluptatum saepe quibusdam, culpa facere nam voluptatibus nesciunt est necessitatibus totam hic animi quasi dolorem minus officia? Quibusdam molestias incidunt adipisci doloribus distinctio, eius veritatis ipsum recusandae numquam, fugit, harum ipsa excepturi voluptate. Repudiandae nesciunt ex ab, dolor provident at dolores esse numquam? Fugiat eaque tempore, nisi accusamus quasi commodi numquam?",
+    "premium": false,
+    "inCart": false,
+    "price": 1000,
+    "count": 0,
+    "total": 0
+  },  
+  
+  {
+    "id": 5,
+    "name": "Londyn",
+    "img": "/data/img/5.jpg",
+    "type": "szosowy",
+    "color": "czarny",
+    "company": "Kross",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, voluptatum saepe quibusdam, culpa facere nam voluptatibus nesciunt est necessitatibus totam hic animi quasi dolorem minus officia? Quibusdam molestias incidunt adipisci doloribus distinctio, eius veritatis ipsum recusandae numquam, fugit, harum ipsa excepturi voluptate. Repudiandae nesciunt ex ab, dolor provident at dolores esse numquam? Fugiat eaque tempore, nisi accusamus quasi commodi numquam?",
+    "premium": false,
+    "inCart": false,
+    "price": 4700,
+    "count": 0,
+    "total": 0
+  },  
+  
+  {
+    "id": 6,
+    "name": "Rzym",
+    "img": "/data/img/6.jpg",
+    "type": "miejski",
+    "color": "zielony",
+    "company": "Aurelia",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, voluptatum saepe quibusdam, culpa facere nam voluptatibus nesciunt est necessitatibus totam hic animi quasi dolorem minus officia? Quibusdam molestias incidunt adipisci doloribus distinctio, eius veritatis ipsum recusandae numquam, fugit, harum ipsa excepturi voluptate. Repudiandae nesciunt ex ab, dolor provident at dolores esse numquam? Fugiat eaque tempore, nisi accusamus quasi commodi numquam?",
+    "premium": false,
+    "inCart": false,
+    "price": 800,
+    "count": 0,
+    "total": 0
+  },  
+  
+  {
+    "id": 7,
+    "name": "Warszawa",
+    "img": "/data/img/7.jpg",
+    "type": "miejski",
+    "color": "biały",
+    "company": "Ssork",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, voluptatum saepe quibusdam, culpa facere nam voluptatibus nesciunt est necessitatibus totam hic animi quasi dolorem minus officia? Quibusdam molestias incidunt adipisci doloribus distinctio, eius veritatis ipsum recusandae numquam, fugit, harum ipsa excepturi voluptate. Repudiandae nesciunt ex ab, dolor provident at dolores esse numquam? Fugiat eaque tempore, nisi accusamus quasi commodi numquam?",
+    "premium": true,
+    "inCart": false,
+    "price": 3900,
+    "count": 0,
+    "total": 0
+  },  
+  {
+    "id": 8,
+    "name": "Ottawa",
+    "img": "/data/img/5.jpg",
+    "type": "szosowy",
+    "color": "zielony",
+    "company": "Aurelia",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, voluptatum saepe quibusdam, culpa facere nam voluptatibus nesciunt est necessitatibus totam hic animi quasi dolorem minus officia? Quibusdam molestias incidunt adipisci doloribus distinctio, eius veritatis ipsum recusandae numquam, fugit, harum ipsa excepturi voluptate. Repudiandae nesciunt ex ab, dolor provident at dolores esse numquam? Fugiat eaque tempore, nisi accusamus quasi commodi numquam?",
+    "premium": false,
+    "inCart": false,
+    "price": 900,
+    "count": 0,
+    "total": 0
+  }
+
+
+]

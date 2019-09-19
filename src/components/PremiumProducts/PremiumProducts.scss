@@ -1,0 +1,152 @@
+
+.premium{
+  padding: 5rem 0;
+  &__title{
+    text-align: center;
+    background: -webkit-linear-gradient(to right, #00c6ff, #0072ff);
+    background: linear-gradient(to right, #00c6ff, #0072ff); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+    margin: 0 0 3rem 0;
+  }
+
+  &__gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+  }
+
+
+  &__card{
+    position: relative;
+    overflow: hidden;
+    padding: 2rem;
+    box-shadow: 2px 2px 3px rgba(0,0,0,.5);
+    background: #fff;
+    border-radius: 5px;
+
+    &::after{
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to right, #00c8ffc9, #0073ffc7); 
+      opacity: 0;
+      transition: all .3s;
+    }
+
+    &:hover{
+      &::after{
+        opacity: 1;
+      }
+
+      .premium__img{
+        transform: scale(1.15);
+      }
+      .premium__name, .premium__price{
+        color: #fff;
+      }
+      .premium__btn{
+        opacity: 1;
+        animation: .5s XD forwards;
+      }
+    }
+  }
+
+  &__img{
+    transition: all .3s;
+  }
+  &__name{
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    z-index: 2;
+    transition: .3s;
+  }
+  &__price{
+    position: absolute;
+    top: 2rem;
+    left: .5rem;
+    z-index: 2;
+    transition: .3s;
+  }
+  &__btn{
+    position: absolute;
+    left: 2rem;
+    bottom: 1rem;
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: 3px solid transparent;
+    font-weight: 600;
+    font-size: 1.2rem;
+    z-index: 2;
+    background: #fff;
+    transition: .3s;
+    opacity: 0;
+    border-radius: 5px;
+    &:hover{
+      border-color: #fff;
+      color: #fff;
+      background: transparent;
+    }
+  }
+
+
+  @media(max-width: 740px){
+    &__gallery{
+      grid-template-columns: 1fr;
+    }
+    &__card{
+      width: 60%;
+      margin: 1rem auto;
+    }
+  }
+  @media(max-width: 585px){
+    &__card{
+      width: 70%;
+    }
+  }
+  @media(max-width: 480px){
+    &__card{
+      width: 80%;
+    }
+  }
+  @media(max-width: 355px){
+    &__btn{
+      font-size: .8rem;
+      padding: .5rem 1rem;
+    }
+  }
+
+}
+
+@keyframes XD{
+  0%{
+    transform: translateY(-10px);
+  }
+  75%{
+    transform: translateY(5px);
+  }
+  100%{
+    transform: translateY(0)
+  }
+}
+
+
+
+
+
+
+
+
+
+.spinner{
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 2rem auto;
+}

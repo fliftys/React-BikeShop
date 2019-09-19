@@ -1,0 +1,39 @@
+.cartLine{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 1rem 0;
+  &__item{
+    width: 5.25rem;
+  }
+
+  &__img{
+    width: 5.25rem;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.2);
+
+  }
+
+  &__trash{
+    color: rgb(228, 0, 0);
+    cursor: pointer;
+
+  }
+
+  &__changeCount{
+    border: 2px solid black;
+    padding: .5rem .8rem;
+    font-weight: 900;
+    font-size: 1.3rem;
+    cursor: pointer;
+    margin: 0 .5rem;
+    opacity: .6;
+    transition: all .3s;
+    &:hover{
+      opacity: 1;
+    }
+  }
+
+
+}

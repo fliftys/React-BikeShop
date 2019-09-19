@@ -1,0 +1,126 @@
+.header{
+
+  padding: .5rem;
+
+  &__top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo{
+    
+
+  }
+  &__img{
+    width: 50px;
+    height: 50px;
+    display: block;
+  }
+
+  &__menu{
+    height: 0;
+    overflow: hidden;
+    transition: all .3s;
+  }
+  &__menu-item{
+    transition: all .3s;
+    text-align: center;
+    &:hover{
+      transform: translateY(-3px);
+    }
+    &:active{
+      transform: translateY(-1px);
+    }
+
+    // tymczasowo
+    &:last-child:hover{
+      .header__link{
+        background: inherit;
+        -webkit-background-clip: inherit; 
+        -webkit-text-fill-color: inherit;
+      }
+
+    }
+
+  }
+  &__link{
+    padding: .8rem;
+    display: inline-block;
+    text-align: center;
+    font-weight: 600;
+    transition: .3s all;
+
+    &:hover{
+      background: -webkit-linear-gradient(to right, #00c6ff, #0072ff);
+      background: linear-gradient(to right, #00c6ff, #0072ff); 
+      -webkit-background-clip: text; 
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__toggle{
+    transition: all .3s;
+
+    &:hover{
+      transform: translateY(-3px);
+    }
+    &:active{
+      transform: translateY(-1px);
+    }
+  }
+
+
+  @media(min-width: 728px){
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__menu{
+      display: flex;
+      height: auto !important;
+      margin-left: 4rem;
+    }
+    &__toggle{
+      display: none;
+
+    }
+
+  }
+}
+
+.cart-icon{
+  position: relative;
+
+
+  &__count{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 1px solid red;
+    color: #fff;
+    background: rgb(255, 0, 0);
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 12px;
+    line-height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.showMenu{
+  height: 200px;
+}
+.active:not(:last-of-type){
+  background: -webkit-linear-gradient(to right, #00c6ff, #0072ff);
+  background: linear-gradient(to right, #00c6ff, #0072ff); 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
+}
+
+/* 
+
+
+
+*/
