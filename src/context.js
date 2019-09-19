@@ -32,7 +32,7 @@ class ProductsProvider extends Component{
   fetchData = async () => {
 
     try{
-      const response = await fetch('http://localhost:3002/data/products.json');
+      const response = await fetch('https://serene-wright-c7a405.netlify.com/data/products.json');
   
       // Fake delay
       await this.sleep();
