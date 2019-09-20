@@ -1,107 +1,96 @@
-.header{
+.header {
   border-bottom: 1px solid #333;
-  padding: .5rem;
+  padding: 0.5rem;
 
-  &__top{
+  &__top {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  &__logo{
+  &__logo {
     display: flex;
     align-items: center;
-
-
   }
-  &__img{
+  &__img {
     width: 50px;
     height: 50px;
   }
-  &__logo-text{
+  &__logo-text {
     font-size: 1.5rem;
     font-weight: 700;
-    color: rgba(0,0,0,.3);
+    color: rgba(0, 0, 0, 0.3);
     margin-left: 1rem;
   }
 
-  &__menu{
+  &__menu {
     height: 0;
     overflow: hidden;
-    transition: all .3s;
+    transition: all 0.3s;
   }
-  &__menu-item{
-    transition: all .3s;
+  &__menu-item {
+    transition: all 0.3s;
     text-align: center;
-    &:hover{
+    &:hover {
       transform: translateY(-3px);
     }
-    &:active{
+    &:active {
       transform: translateY(-1px);
     }
 
     // tymczasowo
-    &:last-child:hover{
-      .header__link{
+    &:last-child:hover {
+      .header__link {
         background: inherit;
-        -webkit-background-clip: inherit; 
+        -webkit-background-clip: inherit;
         -webkit-text-fill-color: inherit;
       }
-
     }
-
   }
-  &__link{
-    padding: .8rem;
+  &__link {
+    padding: 0.8rem;
     display: inline-block;
     text-align: center;
     font-weight: 600;
-    transition: .3s all;
+    transition: 0.3s all;
 
-    &:hover{
+    &:hover {
       background: -webkit-linear-gradient(to right, #00c6ff, #0072ff);
-      background: linear-gradient(to right, #00c6ff, #0072ff); 
-      -webkit-background-clip: text; 
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
   }
 
-  &__toggle{
-    transition: all .3s;
+  &__toggle {
+    transition: all 0.3s;
 
-    &:hover{
+    &:hover {
       transform: translateY(-3px);
     }
-    &:active{
+    &:active {
       transform: translateY(-1px);
     }
   }
 
-
-  @media(min-width: 728px){
-
+  @media (min-width: 728px) {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    &__menu{
+    &__menu {
       display: flex;
       height: auto !important;
       margin-left: 4rem;
     }
-    &__toggle{
+    &__toggle {
       display: none;
-
     }
-
   }
-
-
 }
 
-.cart-icon{
+.cart-icon {
   position: relative;
 
-
-  &__count{
+  &__count {
     position: absolute;
     top: 0;
     right: 0;
@@ -118,13 +107,13 @@
   }
 }
 
-.showMenu{
+.showMenu {
   height: 200px;
 }
-.active:not(:last-of-type){
+.active:not(:last-of-type) {
   background: -webkit-linear-gradient(to right, #00c6ff, #0072ff);
-  background: linear-gradient(to right, #00c6ff, #0072ff); 
-  -webkit-background-clip: text; 
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 

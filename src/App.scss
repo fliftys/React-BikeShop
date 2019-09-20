@@ -1,28 +1,28 @@
 /* ---------------------------------------- */
 /* Global */
 /* ---------------------------------------- */
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html{
+html {
   font-size: 100%;
-  
-  @media(max-width: 768px){
+
+  @media (max-width: 768px) {
     font-size: 90%;
   }
 }
-body{
+body {
   font-family: sans-serif;
 }
-img{
+img {
   width: 100%;
 }
-ul{
+ul {
   list-style: none;
 }
-a{
+a {
   text-decoration: none;
   color: #000;
 }
@@ -31,7 +31,7 @@ a{
 /* Utility classes */
 /* ---------------------------------------- */
 
-.container{
+.container {
   max-width: 1180px;
   padding: 1rem;
   margin: 1rem auto;
@@ -39,13 +39,12 @@ a{
   background: rgb(241, 241, 241);
   color: #333;
 
-
-  box-shadow: inset 0px 0px 21px 3px rgba(0,0,0,0.75);
+  box-shadow: inset 0px 0px 21px 3px rgba(0, 0, 0, 0.75);
 }
 
-body{
-  background: -webkit-linear-gradient(to right, #29323c, #485563);  
-  background: linear-gradient(to right, #29323c, #485563); 
+body {
+  background: -webkit-linear-gradient(to right, #29323c, #485563);
+  background: linear-gradient(to right, #29323c, #485563);
   padding: 1rem;
 }
 

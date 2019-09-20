@@ -1,80 +1,79 @@
-
-.premium{
+.premium {
   padding: 5rem 0;
-  &__title{
+  &__title {
     text-align: center;
     background: -webkit-linear-gradient(to right, #00c6ff, #0072ff);
-    background: linear-gradient(to right, #00c6ff, #0072ff); 
-    -webkit-background-clip: text; 
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 2rem;
     margin: 0 0 3rem 0;
   }
 
-  &__gallery{
+  &__gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;
   }
 
-
-  &__card{
+  &__card {
     position: relative;
     overflow: hidden;
     padding: 2rem;
-    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
     background: #fff;
     border-radius: 5px;
 
-    &::after{
-      content: '';
+    &::after {
+      content: "";
       display: block;
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      background: linear-gradient(to right, #00c8ffc9, #0073ffc7); 
+      background: linear-gradient(to right, #00c8ffc9, #0073ffc7);
       opacity: 0;
-      transition: all .3s;
+      transition: all 0.3s;
     }
 
-    &:hover{
-      &::after{
+    &:hover {
+      &::after {
         opacity: 1;
       }
 
-      .premium__img{
+      .premium__img {
         transform: scale(1.15);
       }
-      .premium__name, .premium__price{
+      .premium__name,
+      .premium__price {
         color: #fff;
       }
-      .premium__btn{
+      .premium__btn {
         opacity: 1;
-        animation: .5s XD forwards;
+        animation: 0.5s XD forwards;
       }
     }
   }
 
-  &__img{
-    transition: all .3s;
+  &__img {
+    transition: all 0.3s;
   }
-  &__name{
+  &__name {
     position: absolute;
-    top: .5rem;
-    left: .5rem;
+    top: 0.5rem;
+    left: 0.5rem;
     z-index: 2;
-    transition: .3s;
+    transition: 0.3s;
   }
-  &__price{
+  &__price {
     position: absolute;
     top: 2rem;
-    left: .5rem;
+    left: 0.5rem;
     z-index: 2;
-    transition: .3s;
+    transition: 0.3s;
   }
-  &__btn{
+  &__btn {
     position: absolute;
     left: 2rem;
     bottom: 1rem;
@@ -85,66 +84,56 @@
     font-size: 1.2rem;
     z-index: 2;
     background: #fff;
-    transition: .3s;
+    transition: 0.3s;
     opacity: 0;
     border-radius: 5px;
-    &:hover{
+    &:hover {
       border-color: #fff;
       color: #fff;
       background: transparent;
     }
   }
 
-
-  @media(max-width: 740px){
-    &__gallery{
+  @media (max-width: 740px) {
+    &__gallery {
       grid-template-columns: 1fr;
     }
-    &__card{
+    &__card {
       width: 60%;
       margin: 1rem auto;
     }
   }
-  @media(max-width: 585px){
-    &__card{
+  @media (max-width: 585px) {
+    &__card {
       width: 70%;
     }
   }
-  @media(max-width: 480px){
-    &__card{
+  @media (max-width: 480px) {
+    &__card {
       width: 80%;
     }
   }
-  @media(max-width: 355px){
-    &__btn{
-      font-size: .8rem;
-      padding: .5rem 1rem;
+  @media (max-width: 355px) {
+    &__btn {
+      font-size: 0.8rem;
+      padding: 0.5rem 1rem;
     }
   }
-
 }
 
-@keyframes XD{
-  0%{
+@keyframes XD {
+  0% {
     transform: translateY(-10px);
   }
-  75%{
+  75% {
     transform: translateY(5px);
   }
-  100%{
-    transform: translateY(0)
+  100% {
+    transform: translateY(0);
   }
 }
 
-
-
-
-
-
-
-
-
-.spinner{
+.spinner {
   display: block;
   width: 50px;
   height: 50px;

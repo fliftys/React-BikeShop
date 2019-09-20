@@ -29,7 +29,17 @@ const Cart = () => {
 
       <ProductsConsumer>
         {context => {
-          const { cart, subTotal, ship, total, handleChange, addCoupon, couponInfo, clearCart, order } = context;
+          const {
+            cart,
+            subTotal,
+            ship,
+            total,
+            handleChange,
+            addCoupon,
+            couponInfo,
+            clearCart,
+            order
+          } = context;
 
           if (cart.length < 1) {
             return <div className="cart__info">Koszyk jest pusty</div>;
@@ -43,25 +53,39 @@ const Cart = () => {
                 {cartView}
 
                 <div className="cart__coupons">
-                  <input className="cart__input" placeholder="kod=bikeshop" type="text" name="enterKey" onChange={async (e) => {
-                    await handleChange(e);
-                    // Synchroniczna metoda addCoupon startowala przed asynchroczninym uzupelnieniem formularza - dlatego await
-                    addCoupon();
-                  }}/>
-                  {couponInfo && <span className="cart__added">{couponInfo}</span>}
+                  <input
+                    className="cart__input"
+                    placeholder="kod=bikeshop"
+                    type="text"
+                    name="enterKey"
+                    onChange={async e => {
+                      await handleChange(e);
+                      // Synchroniczna metoda addCoupon startowala przed asynchroczninym uzupelnieniem formularza - dlatego await
+                      addCoupon();
+                    }}
+                  />
+                  {couponInfo && (
+                    <span className="cart__added">{couponInfo}</span>
+                  )}
                 </div>
                 <div className="cart__summary">
                   <h5>Produkty: {subTotal} PLN</h5>
                   <h5>Przesyłka: {ship} PLN</h5>
                   <h5>Suma: {total} PLN</h5>
                   <div className="cart__buttons">
-                    <button onClick={clearCart} className="cart__btn cart__btn-danger">
+                    <button
+                      onClick={clearCart}
+                      className="cart__btn cart__btn-danger"
+                    >
                       Wyczyść koszyk
                     </button>
-                    <button onClick={() => {
-                      order();
-                      clearCart();
-                    }} className="cart__btn">
+                    <button
+                      onClick={() => {
+                        order();
+                        clearCart();
+                      }}
+                      className="cart__btn"
+                    >
                       Złóż zamówienie
                     </button>
                   </div>

@@ -1,72 +1,65 @@
 /* ------------------------------ */
 /* Filter */
 /* ------------------------------ */
-.filterProducts{
+.filterProducts {
   padding: 4rem 0 0 0;
 
-  &__form{
-
+  &__form {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
   }
 
-  &__input-group{
+  &__input-group {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin:1rem 1.5rem;
-    
+    margin: 1rem 1.5rem;
   }
-  &__label{
-    margin: 0 .5rem;
+  &__label {
+    margin: 0 0.5rem;
   }
 
-  &__select{
-    position: relative; 
+  &__select {
+    position: relative;
     background-color: #e2e2e2;
     border-radius: 3px;
     outline: none;
     cursor: pointer;
-    padding: .5rem 1rem;
-    font-size: .8rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
     border: none;
-
   }
-  &__option{
-    
+  &__option {
   }
-  &__result{
+  &__result {
     text-align: center;
     color: #008f30;
   }
 
-  @media(max-width:710px){
-    &__form{
+  @media (max-width: 710px) {
+    &__form {
       justify-content: center;
     }
   }
-
 }
-
 
 /* ------------------------------ */
 /* Sorted Products */
 /* ------------------------------ */
-.sortedProducts{
-
+.sortedProducts {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 1rem;
   padding: 4rem 0;
 
-  @media(max-width: 768px){
-    grid-template-columns: repeat(3,1fr);
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
   }
-  @media(max-width: 600px){
-    grid-template-columns: repeat(2,1fr);
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
   }
-  @media(max-width: 480px){
+  @media (max-width: 480px) {
     grid-template-columns: 1fr;
   }
 }

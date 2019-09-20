@@ -16,7 +16,7 @@ const CardProduct = ({ product, addToCart, openModal }) => {
         <button
           onClick={() => {
             addToCart(id);
-            openModal(product)
+            openModal(product);
           }}
           disabled={inCart}
           className={`cardProduct__btn ${inCart &&

@@ -9,12 +9,12 @@ const Modal = () => {
       {({ modalInfo, isModal, closeModal }) => {
         const { id, name, img, price } = modalInfo;
 
-        if(isModal){
+        if (isModal) {
           return (
             <Info>
               <div className="wrapper">
                 <h3 className="title">Dodano do koszyka!</h3>
-  
+
                 <div className="data">
                   <h5 className="name">{name}</h5>
                   <div className="img-wrapper">
@@ -22,24 +22,32 @@ const Modal = () => {
                   </div>
                   <span className="price">Cena: {price} PLN</span>
                   <div className="buttons">
-                    <Link onClick={closeModal} className="btn btn-light" to="/products">
+                    <Link
+                      onClick={closeModal}
+                      className="btn btn-light"
+                      to="/products"
+                    >
                       Kontynuuj zakupy
                     </Link>
-                    <Link onClick={closeModal} className="btn btn-dark" to="/cart">
+                    <Link
+                      onClick={closeModal}
+                      className="btn btn-dark"
+                      to="/cart"
+                    >
                       Koszyk
                     </Link>
                   </div>
-  
-                  <div onClick={closeModal} className="close">X</div>
+
+                  <div onClick={closeModal} className="close">
+                    X
+                  </div>
                 </div>
               </div>
             </Info>
           );
-        }
-        else{
+        } else {
           return null;
         }
-
       }}
     </ProductsConsumer>
   );

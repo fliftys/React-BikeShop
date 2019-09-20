@@ -1,40 +1,36 @@
-.footer{
-
-  &__top{
+.footer {
+  &__top {
     background: #252525;
   }
 
-  &__socials{
+  &__socials {
     display: flex;
     align-items: center;
     padding: 3rem 5rem;
     justify-content: space-between;
   }
-  &__socials-item{
-
+  &__socials-item {
   }
-  &__link{
+  &__link {
     font-size: 2rem;
     color: #fff;
 
-    &:hover{
+    &:hover {
       color: rgb(32, 3, 138);
     }
   }
 
-  &__bottom{
-    background:#000;
-    color:#fff;
+  &__bottom {
+    background: #000;
+    color: #fff;
     text-align: center;
-    font-size: .8rem;
+    font-size: 0.8rem;
     padding: 1.5rem;
   }
 
-  @media(max-width: 470px){
-    &__socials{
-
+  @media (max-width: 470px) {
+    &__socials {
       padding: 1rem;
-
     }
   }
 }

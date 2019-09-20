@@ -1,27 +1,25 @@
-.home{
-  
-  &__top{
+.home {
+  &__top {
     position: relative;
   }
-  &__title{
+  &__title {
     position: absolute;
-    top:30%;
+    top: 30%;
     right: 10%;
-    color: rgba(255,255,255, .7);
+    color: rgba(255, 255, 255, 0.7);
     font-size: 2rem;
 
-    &--break{
+    &--break {
       display: block;
     }
   }
 
-  @media(max-width: 460px){
-    &__title{
+  @media (max-width: 460px) {
+    &__title {
       font-size: 1.5rem;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
     }
   }
-
 }

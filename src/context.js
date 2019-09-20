@@ -40,7 +40,9 @@ class ProductsProvider extends Component {
   // Get data
   fetchData = async () => {
     try {
-      const response = await fetch('https://serene-wright-c7a405.netlify.com/data/products.json');
+      const response = await fetch(
+        "https://serene-wright-c7a405.netlify.com/data/products.json"
+      );
       // const response = await fetch("http://localhost:3001/data/products.json");
 
       // Fake delay
@@ -388,14 +390,11 @@ class ProductsProvider extends Component {
     await this.fetchData();
 
     await this.getStorage();
-  }
+  };
 
   componentDidMount() {
-    
     // Ustawianie danych w metodzie getStorage startowalo przedwczesnie w wyniku asynchronicznosci metody fetchData, stad modyfikacja i ustawienie w nowej asynchrocznej metodzie test, ktora ustawia je po kolei w petli wywolan
     this.test();
-
-
 
     // Get data
     // this.fetchData();
