@@ -19,7 +19,7 @@ class ProductsProvider extends Component {
     coupon: 1,
     promotionalKey: "bikeshop",
     enterKey: "",
-    couponInfo: '',
+    couponInfo: "",
     premium: false,
     color: "wszystkie",
     isModal: false,
@@ -41,7 +41,7 @@ class ProductsProvider extends Component {
   fetchData = async () => {
     try {
       const response = await fetch('https://serene-wright-c7a405.netlify.com/data/products.json');
-      // const response = await fetch("http://localhost:3000/data/products.json");
+      // const response = await fetch("http://localhost:3001/data/products.json");
 
       // Fake delay
       await this.sleep();
@@ -112,6 +112,9 @@ class ProductsProvider extends Component {
       }),
       this.calculateCart
     );
+
+    // set data in storage
+    this.setStorage(cart);
   };
 
   deleteFromCart = id => {
@@ -146,6 +149,9 @@ class ProductsProvider extends Component {
       }),
       this.calculateCart
     );
+
+    // set data in storage
+    this.setStorage(cart);
   };
 
   increaseCount = id => {
@@ -191,7 +197,7 @@ class ProductsProvider extends Component {
   };
 
   clearCart = () => {
-    console.log("clear cart")
+    console.log("clear cart");
     let products = [...this.state.products];
     let sortedProducts = [...this.state.products];
     const cart = [];
@@ -199,45 +205,51 @@ class ProductsProvider extends Component {
     products = products.map(product => {
       product.inCart = false;
       product.count = 0;
-      product.total = 0
+      product.total = 0;
       return product;
     });
     sortedProducts = sortedProducts.map(product => {
       product.inCart = false;
       product.count = 0;
-      product.total = 0
+      product.total = 0;
       return product;
     });
 
-    this.setState(() => ({
-      products, sortedProducts, cart
-    }), this.calculateCart)
-
-  }
+    this.setState(
+      () => ({
+        products,
+        sortedProducts,
+        cart
+      }),
+      this.calculateCart
+    );
+  };
   order = () => {
-    alert('Dziękujemy za złożenie zamówienia');
-  }
+    alert("Dziękujemy za złożenie zamówienia");
+  };
 
   addCoupon = () => {
     const key = this.state.enterKey;
     const promotionalKey = this.state.promotionalKey;
     if (key === promotionalKey) {
-      console.log('elo')
+      console.log("elo");
       const coupon = 0.2;
 
       this.setState(
         state => ({
           coupon: state.coupon - coupon,
-          couponInfo: 'Aktywowano zniżkę -20%'
+          couponInfo: "Aktywowano zniżkę -20%"
         }),
         this.calculateCart
       );
-    }
-    else{
-      this.setState({
-        coupon: 1,
-        couponInfo: ''
-      }, this.calculateCart)
+    } else {
+      this.setState(
+        {
+          coupon: 1,
+          couponInfo: ""
+        },
+        this.calculateCart
+      );
     }
   };
 
@@ -322,8 +334,74 @@ class ProductsProvider extends Component {
     });
   };
 
+  setStorage = cart => {
+    // format data
+    const jsonCart = JSON.stringify(cart);
+
+    // set
+    localStorage.setItem("cart", jsonCart);
+  };
+
+  getStorage = async () => {
+    return new Promise((resolve, reject) => {
+      if (this.state.cart.length === 0) {
+        // Get data
+        let cart = localStorage.getItem("cart");
+        cart = JSON.parse(cart);
+
+        // Update products and sorted products
+        let products = [...this.state.products];
+        let sortedProducts = [...this.state.products];
+        console.log(products, sortedProducts);
+        cart.forEach(product => {
+          products = products.map(p => {
+            if (product.id === p.id) {
+              p.inCart = true;
+            }
+            return p;
+          });
+
+          sortedProducts = sortedProducts.map(p => {
+            if (product.id === p.id) {
+              p.inCart = true;
+              p.total = product.total;
+              p.count = product.count;
+            }
+            return p;
+          });
+        });
+
+        // set cart in state
+        this.setState(
+          state => ({
+            cart,
+            products,
+            sortedProducts
+          }),
+          this.calculateCart
+        );
+      }
+    });
+  };
+
+  test = async () => {
+    await this.fetchData();
+
+    await this.getStorage();
+  }
+
   componentDidMount() {
-    this.fetchData();
+    
+    // Ustawianie danych w metodzie getStorage startowalo przedwczesnie w wyniku asynchronicznosci metody fetchData, stad modyfikacja i ustawienie w nowej asynchrocznej metodzie test, ktora ustawia je po kolei w petli wywolan
+    this.test();
+
+
+
+    // Get data
+    // this.fetchData();
+
+    // Set cart
+    // this.getStorage();
   }
 
   render() {
