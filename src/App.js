@@ -9,6 +9,7 @@ import Contact from './pages/Contact/Contact';
 import Cart from './pages/Cart/Cart';
 
 import Footer from './components/Footer/Footer';
+import Modal from './components/Modal/Modal';
 
 import "./App.scss";
 
@@ -26,6 +27,7 @@ const App = () => {
 
       </Switch>
       <Footer />
+      <Modal />
     </div>
   )
 }

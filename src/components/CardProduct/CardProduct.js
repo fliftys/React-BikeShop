@@ -2,7 +2,7 @@ import React from "react";
 import "./CardProduct.scss";
 import { Link } from "react-router-dom";
 
-const CardProduct = ({ product, addToCart }) => {
+const CardProduct = ({ product, addToCart, openModal }) => {
   const { name, img, price, inCart, id } = product;
 
   return (
@@ -14,7 +14,10 @@ const CardProduct = ({ product, addToCart }) => {
       <div className="cardProduct__info">
         <span className="cardProduct__price">{price} PLN</span>
         <button
-          onClick={() => addToCart(id)}
+          onClick={() => {
+            addToCart(id);
+            openModal(product)
+          }}
           disabled={inCart}
           className={`cardProduct__btn ${inCart &&
             " cardProduct__btn--inCart"}`}

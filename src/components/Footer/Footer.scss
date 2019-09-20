@@ -29,4 +29,12 @@
     font-size: .8rem;
     padding: 1.5rem;
   }
+
+  @media(max-width: 470px){
+    &__socials{
+
+      padding: 1rem;
+
+    }
+  }
 }

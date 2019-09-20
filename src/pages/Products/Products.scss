@@ -7,7 +7,7 @@
   &__form{
 
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     flex-wrap: wrap;
   }
 
@@ -15,6 +15,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin:1rem 1.5rem;
     
   }
   &__label{
@@ -39,6 +40,13 @@
     text-align: center;
     color: #008f30;
   }
+
+  @media(max-width:710px){
+    &__form{
+      justify-content: center;
+    }
+  }
+
 }
 
 
@@ -52,4 +60,13 @@
   grid-gap: 1rem;
   padding: 4rem 0;
 
+  @media(max-width: 768px){
+    grid-template-columns: repeat(3,1fr);
+  }
+  @media(max-width: 600px){
+    grid-template-columns: repeat(2,1fr);
+  }
+  @media(max-width: 480px){
+    grid-template-columns: 1fr;
+  }
 }

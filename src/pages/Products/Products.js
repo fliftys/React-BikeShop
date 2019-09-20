@@ -9,7 +9,7 @@ class Products extends Component{
   
 
   render(){
-    let {handleChange, products ,sortedProducts, addToCart, color, type, minPrice, maxPrice, price, premium} = this.context;
+    let {handleChange, products ,sortedProducts, addToCart, color, type, minPrice, maxPrice, price, premium, openModal} = this.context;
     
     // Get unique values
     const colors = ['wszystkie', ...new Set(products.map(product => product.color))];
@@ -19,7 +19,7 @@ class Products extends Component{
 
     if(sortedProducts.length){
 
-      sortedProducts = sortedProducts.map(product => <CardProduct key={product.id} product={product} addToCart={addToCart} />)
+      sortedProducts = sortedProducts.map(product => <CardProduct key={product.id} product={product} addToCart={addToCart} openModal={openModal} />)
 
     }
 

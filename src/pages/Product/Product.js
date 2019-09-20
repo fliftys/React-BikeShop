@@ -15,7 +15,7 @@ class Product extends Component {
   componentDidMount() {}
 
   render() {
-    const { loading, addToCart } = this.context;
+    const { loading, addToCart, openModal } = this.context;
     const item = this.context.getItem(this.state.productID);
 
     if (loading && !item) {
@@ -60,7 +60,10 @@ class Product extends Component {
                 disabled={inCart}
                 className={`singleProduct__btn ${inCart &&
                   " singleProduct__btn--inCart"}`}
-                onClick={() => addToCart(id)}
+                onClick={() => {
+                  openModal(item);
+                  addToCart(id);
+                }}
               >
                 {inCart ? "W koszyku" : "Do koszyka!"}
               </button>

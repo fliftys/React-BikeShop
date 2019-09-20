@@ -27,6 +27,7 @@ class Navbar extends Component{
         <div className="header__top">
           <div className="header__logo">
             <img src={logo} alt="logo" className="header__img"/>
+            <span className="header__logo-text">Bikeshop</span>
           </div>
           <FaStream onClick={this.handleClick} className="header__toggle" />
         </div>
