@@ -13,7 +13,7 @@ Podgląd na NETLIFY: https://serene-wright-c7a405.netlify.com/
 </ul>
 
 <h2>Opis</h2>
-Założeniem projektu było przećwiczenie routingu, contextAPI, pracy z danymi(fetchowanie danych przypomina pracę ze zwykłym restowym api), asynchroniczności, kontrolowanych komponentów.
+Założeniem projektu było przećwiczenie routingu, contextAPI, pracy z danymi(fetchowanie danych w tym projekcie przypomina do złudzenia pracę ze zwykłym restowym api), asynchroniczności, kontrolowanych komponentów.
 Koszyk jest na bieżąco zapisywany w localStorage, zapobiega to utracie danych przy odświeżeniu, istnieje możliwość sortowania produktów po wybranych cechach.
 Strona jest w pełni dostosowana do urządzeń mobilnych
 
